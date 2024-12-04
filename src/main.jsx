@@ -20,6 +20,8 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import MyProfile from './components/Pages/MyProfile';
 import CardDetails from './components/CardDetails/CardDetails';
 
+import UpdatePage from './components/Pages/UpdatePage';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -41,8 +43,9 @@ const router = createBrowserRouter([
       element:<PrivateRoute><AddEquipment></AddEquipment></PrivateRoute>
       },
       {
-        path:'/myEquipment',
-        element:<PrivateRoute><MyEquipment></MyEquipment></PrivateRoute>
+        path:'/myEquipment/:email',
+        element:<PrivateRoute><MyEquipment></MyEquipment></PrivateRoute>,
+        loader:({params})=>fetch(`http://localhost:5000/api/equipments?email=${params.email}`)
       },
       {
         path:'/login',
@@ -57,12 +60,14 @@ const router = createBrowserRouter([
         element:<PrivateRoute><MyProfile></MyProfile></PrivateRoute>
       },
       {
-        path:'/equipment/:id',
+        path:'/equipments/:id',
         element:<PrivateRoute><CardDetails></CardDetails></PrivateRoute>,
         loader:({params})=>fetch(`http://localhost:5000/equipments/${params.id}`)
-      
-
-
+      },
+      {
+        path:'/equipment/:id',
+        element:<PrivateRoute><UpdatePage></UpdatePage></PrivateRoute>,
+        loader:({params})=>fetch(`http://localhost:5000/equipments/${params.id}`)
       },
       
     ]

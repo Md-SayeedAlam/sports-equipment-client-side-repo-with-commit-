@@ -22,7 +22,7 @@ const Card = ({item}) => {
           <p className='font-medium text-gray-400'><span className='font-semibold text-gray-600'>Available Quantity : </span> {quantity}</p>
           <p className='font-medium text-gray-400'><span className='font-semibold text-gray-600'>Rating : </span> {rating}</p>
           <div className="card-actions justify-center">
-         <Link to={`/equipment/${_id}`}><button className="btn btn-neutral">View Details</button></Link>
+         <Link to={`/equipments/${_id}`}><button className="btn btn-neutral">View Details</button></Link>
           </div>
         </div>
       </div>

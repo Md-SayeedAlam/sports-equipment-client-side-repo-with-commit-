@@ -4,6 +4,7 @@ import logo from '../../../public/sports-store-logo-template-vector.jpg'
 import './Navbar.css'
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { toast } from 'react-toastify';
+import MyEquipment from './../Pages/MyEquipment';
 
 const Navbar = () => {
 
@@ -76,7 +77,7 @@ const Navbar = () => {
         <NavLink to="/">Home</NavLink>
         <NavLink to="/allEquipment">All Sports Equipment</NavLink>
         <NavLink to="/addEquipment">Add Equipment</NavLink>
-        <NavLink to="/myEquipment">My Equipment</NavLink>
+        <NavLink to={`/myEquipment/${user.email}`}>My Equipment</NavLink>
         <NavLink to="/myProfile">My Profile</NavLink>
         
       </ul>

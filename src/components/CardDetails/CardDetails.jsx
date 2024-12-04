@@ -2,7 +2,10 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 
 const CardDetails = () => {
+    
+    
     const items = useLoaderData();
+    console.log(items)
    const {name,email,itemName,quantity,category,photo,process,customization,price,rating,description } = items
    
     
@@ -42,10 +45,7 @@ const CardDetails = () => {
             </p>
             <p className="text-gray-400"> <span className="font-semibold text-gray-600">Description: </span>{" "} {description}</p>
 
-            <p className="font-medium text-gray-400">
-            <span className="font-semibold text-gray-600">Rating: </span>{" "}
-              {rating}
-            </p>
+           
             <p className="font-medium text-gray-400">
             <span className="font-semibold text-gray-600">Quantity: </span>{" "}
               {quantity} pcs
@@ -55,7 +55,10 @@ const CardDetails = () => {
               {customization}
             </p>
 
-
+            <p className="font-medium text-gray-400">
+            <span className="font-semibold text-gray-600">Rating: </span>{" "}
+              {rating}
+            </p>
 
             <div className="rating">
               <input
