@@ -18,6 +18,7 @@ import Register from './components/Pages/Register';
 import AuthProvider from './components/AuthProvider/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import MyProfile from './components/Pages/MyProfile';
+import CardDetails from './components/CardDetails/CardDetails';
 
 const router = createBrowserRouter([
   {
@@ -27,11 +28,13 @@ const router = createBrowserRouter([
     children:[
       {
         path:'/',
-        element:<Home></Home>
+        element:<Home></Home>,
+        loader:()=>fetch('http://localhost:5000/equipments')
       },
       {
         path:'/allEquipment',
-        element:<AllEquipment></AllEquipment>
+        element:<AllEquipment></AllEquipment>,
+        loader:()=>fetch('http://localhost:5000/equipments')
       },
       {
       path:'/addEquipment',
@@ -52,6 +55,14 @@ const router = createBrowserRouter([
       {
         path:'/myProfile',
         element:<PrivateRoute><MyProfile></MyProfile></PrivateRoute>
+      },
+      {
+        path:'/equipment/:id',
+        element:<PrivateRoute><CardDetails></CardDetails></PrivateRoute>,
+        loader:({params})=>fetch(`http://localhost:5000/equipments/${params.id}`)
+      
+
+
       },
       
     ]

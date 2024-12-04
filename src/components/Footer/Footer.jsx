@@ -3,7 +3,7 @@ import logo from '../../../public/sports-store-logo-template-vector.jpg'
 import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
-        <footer className="footer footer-center bg-base-300  p-10">
+        <footer className="footer footer-center bg-base-300  p-10 mt-10">
   <aside>
         <img className='w-14 rounded-full' src={logo} alt="" />
    
