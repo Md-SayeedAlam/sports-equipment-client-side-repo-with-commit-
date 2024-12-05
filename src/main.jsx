@@ -48,6 +48,12 @@ const router = createBrowserRouter([
         loader:({params})=>fetch(`http://localhost:5000/api/equipments?email=${params.email}`)
       },
       {
+        path:'/myEquipment',
+        element:<PrivateRoute><MyEquipment></MyEquipment></PrivateRoute>,
+        
+        
+      },
+      {
         path:'/login',
         element:<Login></Login>
       },
