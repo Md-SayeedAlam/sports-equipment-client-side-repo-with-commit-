@@ -125,7 +125,7 @@ const UpdatePage = () => {
 
         {/* form name and quantity row */}
         <div className=" md:flex mb-8 ">
-          <div className="form-control md:w-1/2">
+          <div className="form-control md:w-1/2 lg:w-1/2 w-full">
             <label className="label">
               <span className="label-text">Item Name</span>
             </label>
@@ -142,7 +142,7 @@ const UpdatePage = () => {
             </label>
           </div>
 
-          <div className="form-control md:w-1/2 ml-4">
+          <div className="form-control md:w-1/2 ml-0 md:ml-4 lg:ml-4  lg:w-1/2 w-full">
             <label className="label">
               <span className="label-text">Available Product Quantity</span>
             </label>
@@ -163,7 +163,7 @@ const UpdatePage = () => {
         {/* form category and details row */}
 
         <div className=" md:flex mb-8">
-          <div className="form-control md:w-1/2">
+          <div className="form-control md:w-1/2 lg:w-1/2 w-full">
             <label className="label">
               <span className="label-text">Category</span>
             </label>
@@ -180,7 +180,7 @@ const UpdatePage = () => {
             </label>
           </div>
 
-          <div className="form-control md:w-1/2 ml-4">
+          <div className="form-control md:w-1/2   ml-0 md:ml-4 lg:ml-4  lg:w-1/2 w-full">
             <label className="label">
               <span className="label-text">Description</span>
             </label>
@@ -200,7 +200,7 @@ const UpdatePage = () => {
 
         {/* form price and rating row */}
         <div className=" md:flex mb-8">
-          <div className="form-control md:w-1/2">
+          <div className="form-control md:w-1/2 lg:w-1/2 w-full">
             <label className="label">
               <span className="label-text">Price</span>
             </label>
@@ -217,7 +217,7 @@ const UpdatePage = () => {
             </label>
           </div>
 
-          <div className="form-control md:w-1/2 ml-4">
+          <div className="form-control md:w-1/2 ml-0 md:ml-4 lg:ml-4  lg:w-1/2 w-full">
             <label className="label">
               <span className="label-text">Rating</span>
             </label>
@@ -239,7 +239,7 @@ const UpdatePage = () => {
 
     {/* form customize and processing row */}
     <div className=" md:flex mb-8">
-          <div className="form-control md:w-1/2">
+          <div className="form-control md:w-1/2 lg:w-1/2 w-full">
             <label className="label">
               <span className="label-text">Customization</span>
             </label>
@@ -256,7 +256,7 @@ const UpdatePage = () => {
             </label>
           </div>
 
-          <div className="form-control md:w-1/2 ml-4">
+          <div className="form-control md:w-1/2 ml-0 md:ml-4 lg:ml-4  lg:w-1/2 w-full">
             <label className="label">
               <span className="label-text">Processing Time</span>
             </label>
