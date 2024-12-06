@@ -16,7 +16,7 @@ const Home = () => {
     <>
     <div className="bg-base-300">
       {/* Banner section */}
-     <div>
+     <div className=" btn ">
      <Theme></Theme>
      </div>
       
