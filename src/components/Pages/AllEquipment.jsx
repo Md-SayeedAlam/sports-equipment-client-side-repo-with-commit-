@@ -21,7 +21,7 @@ const AllEquipment = () => {
   return (
     <div className="overflow-hidden flex flex-col gap-5 justify-center items-center mt-10 bg-base-200">
       <div>
-        <button onClick={handleSort} className="btn btn-primary mt-2">Sort By Price</button>
+        <button onClick={handleSort} className="btn btn-neutral mt-2">Sort By Price</button>
       </div>
       <table className="">
         <thead>

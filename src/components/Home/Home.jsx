@@ -7,13 +7,19 @@ import blog2 from '../../../public/fitness.jpg'
 import blog3 from '../../../public/mental.jpg'
 import { useLoaderData } from "react-router-dom";
 import Card from "../Card/Card";
+import Theme from "../Pages/Theme";
 
 const Home = () => {
   const items = useLoaderData();
+  
   return (
+    <>
     <div className="bg-base-300">
       {/* Banner section */}
-
+     <div>
+     <Theme></Theme>
+     </div>
+      
       <div className="carousel w-full  mt-10 mb-10">
         <div id="slide1" className="carousel-item relative w-full">
           <img src={sports1} className="w-full  h-[500px]" />
@@ -60,37 +66,37 @@ const Home = () => {
 
       {/* categories section */}
 
-      <section id="categories" className="py-8 bg-gray-100">
+      <section id="categories" className="py-8 bg-base-300">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-6">
             Sports Categories
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="p-4 bg-white shadow-md rounded-lg text-center">
+            <div className="p-4 bg-gray-100 shadow-md rounded-lg text-center">
               <h3 className="text-lg font-semibold mb-2">Football</h3>
               <p>
                 Explore our wide range of football equipment and accessories..
               </p>
             </div>
-            <div className="p-4 bg-white shadow-md rounded-lg text-center">
+            <div className="p-4 bg-gray-100 shadow-md rounded-lg text-center">
               <h3 className="text-lg font-semibold mb-2">Basketball</h3>
               <p>Discover top-quality basketball gear and apparel..</p>
             </div>
-            <div className="p-4 bg-white shadow-md rounded-lg text-center">
+            <div className="p-4 bg-gray-100 shadow-md rounded-lg text-center">
               <h3 className="text-lg font-semibold mb-2">Tennis</h3>
               <p>Shop tennis rackets, balls, and other essentials..</p>
             </div>
-            <div className="p-4 bg-white shadow-md rounded-lg text-center">
+            <div className="p-4 bg-gray-100 shadow-md rounded-lg text-center">
               <h3 className="text-lg font-semibold mb-2">Cricket</h3>
               <p>
                 Find everything you need for cricket, from bats to helmets..
               </p>
             </div>
-            <div className="p-4 bg-white shadow-md rounded-lg text-center">
+            <div className="p-4 bg-gray-100 shadow-md rounded-lg text-center">
               <h3 className="text-lg font-semibold mb-2">Swimming</h3>
               <p>Check out our collection of swimming gear and accessories..</p>
             </div>
-            <div className="p-4 bg-white shadow-md rounded-lg text-center">
+            <div className="p-4 bg-gray-100 shadow-md rounded-lg text-center">
               <h3 className="text-lg font-semibold mb-2">Running</h3>
               <p>Get the best running shoes and apparel for your needs..</p>
             </div>
@@ -100,7 +106,7 @@ const Home = () => {
 
       {/* extra 1st section */}
 
-      <section  className="py-8 bg-white">
+      <section  className="py-8 ">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-6">
             What Our Customers Say
@@ -131,12 +137,12 @@ const Home = () => {
 
       {/* extra 2nd section */}
 
-      <section id="latest-blog-posts" className="py-8 bg-gray-50">
+      <section className="py-8  card">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-6">
             Latest Blog Posts
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-6">
             {/* Blog Post-- 1 */}
             <div className="p-4 bg-white shadow-md rounded-lg">
               <img
@@ -206,7 +212,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </div>
+    </div></>
   );
 };
 
