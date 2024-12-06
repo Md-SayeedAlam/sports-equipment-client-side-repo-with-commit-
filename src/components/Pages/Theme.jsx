@@ -31,11 +31,17 @@ const Theme = () => {
 
 
     return (
-        <label className="swap swap-rotate">
-        <input onClick={changeTheme} type="checkbox" />
-        <div className="swap-on">DARK</div>
-        <div className="swap-off">LIGHT</div>
-      </label>
+       <label className="swap swap-rotate">
+      <input 
+        onClick={changeTheme} 
+        type="checkbox" 
+        className="toggle theme-controller" 
+        checked={theme === 'dark'} 
+        readOnly 
+      />
+      <div className="swap-on">DARK</div>
+      <div className="swap-off">LIGHT</div>
+    </label>
     );
 };
 
