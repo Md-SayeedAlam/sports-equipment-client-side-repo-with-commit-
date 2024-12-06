@@ -1,11 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, Navigate, useLoaderData } from "react-router-dom";
 
 const AllEquipment = () => {
-  const equipment = useLoaderData();
-  console.log(equipment);
+  const data = useLoaderData();
+
+  // console.log(data);
+
+  const [equipment, setEquipment] = useState(data);
+
+  const handleSort = () => {
+    const sortedEquipment = [...equipment].sort((a, b) => 
+      parseFloat(a.price) - parseFloat(b.price))
+    console.log(sortedEquipment)
+    setEquipment(sortedEquipment);
+  };
+
+
+
+
   return (
-    <div className="overflow-hidden flex justify-center items-center mt-10 bg-base-200">
+    <div className="overflow-hidden flex flex-col gap-5 justify-center items-center mt-10 bg-base-200">
+      <div>
+        <button onClick={handleSort} className="btn btn-primary mt-2">Sort By Price</button>
+      </div>
       <table className="">
         <thead>
           <tr>
