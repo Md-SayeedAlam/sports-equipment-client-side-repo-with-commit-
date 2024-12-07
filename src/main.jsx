@@ -31,12 +31,12 @@ const router = createBrowserRouter([
       {
         path:'/',
         element:<Home></Home>,
-        loader:()=>fetch('http://localhost:5000/equipments')
+        loader:()=>fetch('https://sports-equipments-server-omega.vercel.app/equipments')
       },
       {
         path:'/allEquipment',
         element:<AllEquipment></AllEquipment>,
-        loader:()=>fetch('http://localhost:5000/equipments')
+        loader:()=>fetch('https://sports-equipments-server-omega.vercel.app/equipments')
       },
       {
       path:'/addEquipment',
@@ -45,7 +45,7 @@ const router = createBrowserRouter([
       {
         path:'/myEquipment/:email',
         element:<PrivateRoute><MyEquipment></MyEquipment></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/api/equipments?email=${params.email}`)
+        loader:({params})=>fetch(`https://sports-equipments-server-omega.vercel.app/api/equipments?email=${params.email}`)
       },
       {
         path:'/myEquipment',
@@ -68,12 +68,12 @@ const router = createBrowserRouter([
       {
         path:'/equipments/:id',
         element:<PrivateRoute><CardDetails></CardDetails></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/equipments/${params.id}`)
+        loader:({params})=>fetch(`https://sports-equipments-server-omega.vercel.app/equipments/${params.id}`)
       },
       {
         path:'/equipment/:id',
         element:<PrivateRoute><UpdatePage></UpdatePage></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/equipments/${params.id}`)
+        loader:({params})=>fetch(`https://sports-equipments-server-omega.vercel.app/equipments/${params.id}`)
       },
       
     ]

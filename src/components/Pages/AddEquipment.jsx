@@ -25,7 +25,7 @@ const AddEquipment = () => {
     const newItem = {name,email,itemName,quantity,category,photo,process,customization,price,rating,description }
     console.log(newItem)
 
-    fetch('http://localhost:5000/equipments',{
+    fetch('https://sports-equipments-server-omega.vercel.app/equipments',{
         method:'POST',
         headers:{
             'content-type':'application/json'

@@ -31,7 +31,7 @@ const UpdatePage = () => {
     const newItem = {name,email,itemName,quantity,category,photo,process,customization,price,rating,description }
     console.log(newItem)
 
-    fetch(`http://localhost:5000/equipments/${_id}`,{
+    fetch(`https://sports-equipments-server-omega.vercel.app/equipments/${_id}`,{
         method:'PUT',
         headers:{
             'content-type':'application/json'
@@ -282,7 +282,7 @@ const UpdatePage = () => {
 
         <input
           type="submit"
-          value="Add Item"
+          value="Update Item"
           className="btn btn-block btn-neutral"
         />
       </form>

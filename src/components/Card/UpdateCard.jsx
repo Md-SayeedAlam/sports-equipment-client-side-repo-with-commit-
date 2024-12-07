@@ -18,7 +18,7 @@ const UpdateCard = ({item,items,setItems}) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/equipments/${_id}`, {
+                fetch(`https://sports-equipments-server-omega.vercel.app/equipments/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
