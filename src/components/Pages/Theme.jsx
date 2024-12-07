@@ -39,8 +39,11 @@ const Theme = () => {
         checked={theme === 'dark'} 
         readOnly 
       />
-      <div className="swap-on">DARK</div>
-      <div className="swap-off">LIGHT</div>
+      <div className="swap-on my-anchor-element">
+      
+        DARK
+        </div>
+      <div className="swap-off my-anchor-element">LIGHT</div>
     </label>
     );
 };
