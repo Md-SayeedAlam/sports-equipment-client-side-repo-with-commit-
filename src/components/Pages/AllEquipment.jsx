@@ -30,10 +30,10 @@ const AllEquipment = () => {
     </button>
   </div>
  {/* added responsive classes in this table */}
-  <div className="w-full">
+  <div className="w-full ">
     <table className="table-auto w-full border border-gray-200">
       <thead>
-        <tr className="bg-gray-100">
+        <tr className="">
           <th className="px-2 py-1 text-center text-xs font-semibold border border-gray-200">
             No:
           </th>
@@ -58,7 +58,7 @@ const AllEquipment = () => {
         {equipment.map((item, index) => (
           <tr
             key={item._id}
-            className="bg-white hover:bg-gray-50 border-b border-gray-200"
+            className=""
           >
             <td className="px-2 py-1 text-xs border border-gray-200 text-center">
               {index + 1}

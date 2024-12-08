@@ -170,13 +170,13 @@ const Home = () => {
             <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-6">
               {/* Blog Post-- 1 */}
               <Fade direction="down">
-                <div className="p-4 bg-white shadow-md rounded-lg">
+                <div className="p-4 shadow-md rounded-lg">
                   <img
                     src={blog1}
-                    alt="Blog Post 1"
+                    alt="Blog Post-1"
                     className="w-full h-48 object-cover rounded-lg mb-4"
                   />
-                  <h3 className="text-xl font-semibold text-gray-800">
+                  <h3 className="text-xl font-semibold ">
                     How to Choose the Right Sports Gear
                   </h3>
                   <p className="text-gray-600 mb-4">
@@ -194,13 +194,13 @@ const Home = () => {
               </Fade>
               {/* Blog Post-- 2 */}
               <Fade direction="right">
-                <div className="p-4 bg-white shadow-md rounded-lg">
+                <div className="p-4  shadow-md rounded-lg">
                   <img
                     src={blog2}
-                    alt="Blog Post 2"
+                    alt="Blog Post-2"
                     className="w-full h-48 object-cover rounded-lg mb-4"
                   />
-                  <h3 className="text-xl font-semibold text-gray-800">
+                  <h3 className="text-xl font-semibold ">
                     Top Fitness Trends for 2024
                   </h3>
                   <p className="text-gray-600 mb-4">
@@ -218,13 +218,13 @@ const Home = () => {
               </Fade>
               {/* Blog Post --3 */}
               <Fade direction="up">
-                <div className="p-4 bg-white shadow-md rounded-lg">
+                <div className="p-4  shadow-md rounded-lg">
                   <img
                     src={blog3}
-                    alt="Blog Post 3"
+                    alt="Blog Post-3"
                     className="w-full h-48 object-cover rounded-lg mb-4"
                   />
-                  <h3 className="text-xl font-semibold text-gray-800">
+                  <h3 className="text-xl font-semibold ">
                     Benefits of Outdoor Sports for Mental Health
                   </h3>
                   <p className="text-gray-600 mb-4">
