@@ -19,67 +19,120 @@ const AllEquipment = () => {
 
 
   return (
-    <div className="overflow-hidden flex flex-col gap-5 justify-center items-center mt-10 bg-base-200">
-      <div>
-        <button onClick={handleSort} className="btn btn-neutral mt-2">Sort By Price</button>
-      </div>
-      <table className="">
-        <thead>
-          <tr>
-            <th className="mr-2">No:</th>
-            <th>Item Name</th>
-            <th>Price</th>
-            <th>Category</th>
-            <th>Details</th>
-          </tr>
-        </thead>
-        <tbody>
-          {equipment.map((item, index) => (
-            <tr key={item._id}>
-              <td>{index + 1}</td>
-              <td>{item.itemName}</td>
+    // <div className="flex flex-col gap-5 justify-center items-center mt-10 bg-base-200">
+    //   <div>
+    //     <button onClick={handleSort} className="btn btn-neutral mt-2">Sort By Price</button>
+    //   </div>
+    //   <table className="table">
+    //     <thead>
+    //       <tr>
+    //         <th className="mr-2">No:</th>
+    //         <th>Item Name</th>
+    //         <th>Price</th>
+    //         <th>Category</th>
+    //         <th>Details</th>
+    //       </tr>
+    //     </thead>
+    //     <tbody>
+    //       {equipment.map((item, index) => (
+    //         <tr key={item._id}>
+    //           <td>{index + 1}</td>
+    //           <td>{item.itemName}</td>
 
-              <td>${item.price}</td>
-              <td>{item.category}</td>
-              <td>
-              <Link to={`/equipments/${item._id}`}><button className="btn bg-gray-300 text-sm">View Details</button></Link>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+    //           <td>${item.price}</td>
+    //           <td>{item.category}</td>
+    //           <td>
+    //           <Link to={`/equipments/${item._id}`}><button className="btn bg-gray-300 text-sm">View Details</button></Link>
+    //           </td>
+    //         </tr>
+    //       ))}
+    //     </tbody>
+    //   </table>
+    // </div>
+
+
+
+    
+
+<div className="flex flex-col gap-4 justify-center items-center mt-6 bg-base-200 p-3">
+  <div>
+    <button onClick={handleSort} className="btn btn-neutral ">
+      Sort By Price
+    </button>
+  </div>
+ {/* added responsive classes in this table */}
+  <div className="w-full">
+    <table className="table-auto w-full border border-gray-200">
+      <thead>
+        <tr className="bg-gray-100">
+          <th className="px-2 py-1 text-center text-xs font-semibold border border-gray-200">
+            No:
+          </th>
+          <th className="px-2 py-1 text-center text-xs font-semibold border border-gray-200">
+            Photo
+          </th>
+          <th className="px-2 py-1 text-center text-xs font-semibold border border-gray-200">
+            Item Name
+          </th>
+          <th className="px-2 py-1 text-center text-xs font-semibold border border-gray-200">
+            Price
+          </th>
+          <th className="px-2 py-1 text-center text-xs font-semibold border border-gray-200">
+            Category
+          </th>
+          <th className="px-2 py-1 text-center text-xs font-semibold border border-gray-200">
+            Details
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {equipment.map((item, index) => (
+          <tr
+            key={item._id}
+            className="bg-white hover:bg-gray-50 border-b border-gray-200"
+          >
+            <td className="px-2 py-1 text-xs border border-gray-200 text-center">
+              {index + 1}
+            </td>
+            <td className="px-2 py-1 border border-gray-200">
+              <img
+                src={item.photo}
+                alt={item.itemName}
+                className="w-8 h-8 rounded-full object-cover mx-auto"
+              />
+            </td>
+            <td className="px-2 py-1 text-xs border text-center border-gray-200 break-words">
+              {item.itemName}
+            </td>
+            <td className="px-2 py-1 text-xs border border-gray-200 text-center">
+              ${item.price}
+            </td>
+            <td className="px-2 py-1 text-xs border text-center border-gray-200 break-words">
+              {item.category}
+            </td>
+            <td className="px-2 py-1 text-xs border border-gray-200">
+              <div className="flex justify-center">
+                <Link to={`/equipments/${item._id}`}>
+                  <button className="btn btn-xxs bg-gray-300 text-[10px]">
+                    Details
+                  </button>
+                </Link>
+              </div>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+
+
   );
 };
 
 export default AllEquipment;
 
-{
-  /* <div className="block md:hidden">
-    {equipment.map((item, index) => (
-      <div
-        key={item._id}
-        className="mb-4 p-4 border border-gray-200 rounded shadow-sm bg-white"
-      >
-        <p>
-          <strong>No:</strong> {index + 1}
-        </p>
-        <p>
-          <strong>Item Name:</strong> {item.itemName}
-        </p>
-        <p>
-          <strong>Price:</strong> ${item.price}
-        </p>
-        <p>
-          <strong>Category:</strong> {item.category}
-        </p>
-        <button
-          className="btn mt-2 text-sm bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600"
-          onClick={() => Navigate(`/equipment/${item._id}`)}
-        >
-          View Details
-        </button>
-      </div>
-    ))}
-  </div> */
-}
