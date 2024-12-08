@@ -19,38 +19,7 @@ const AllEquipment = () => {
 
 
   return (
-    // <div className="flex flex-col gap-5 justify-center items-center mt-10 bg-base-200">
-    //   <div>
-    //     <button onClick={handleSort} className="btn btn-neutral mt-2">Sort By Price</button>
-    //   </div>
-    //   <table className="table">
-    //     <thead>
-    //       <tr>
-    //         <th className="mr-2">No:</th>
-    //         <th>Item Name</th>
-    //         <th>Price</th>
-    //         <th>Category</th>
-    //         <th>Details</th>
-    //       </tr>
-    //     </thead>
-    //     <tbody>
-    //       {equipment.map((item, index) => (
-    //         <tr key={item._id}>
-    //           <td>{index + 1}</td>
-    //           <td>{item.itemName}</td>
-
-    //           <td>${item.price}</td>
-    //           <td>{item.category}</td>
-    //           <td>
-    //           <Link to={`/equipments/${item._id}`}><button className="btn bg-gray-300 text-sm">View Details</button></Link>
-    //           </td>
-    //         </tr>
-    //       ))}
-    //     </tbody>
-    //   </table>
-    // </div>
-
-
+   
 
     
 
