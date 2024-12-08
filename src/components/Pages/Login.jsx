@@ -17,7 +17,7 @@ const Login = () => {
         const email = e.target.email.value;
         
         const password = e.target.password.value;
-        console.log(email,password)
+        // console.log(email,password)
 
         signInUSer(email,password)
     .then(result=>{
@@ -32,7 +32,7 @@ const Login = () => {
       navigate(location?.state ? location.state  : "/");
     })
     .catch(err=>{
-      console.log("ERROR",err.message)
+      // console.log("ERROR",err.message)
       toast.error(`Login failed: ${err.message}`, {
         position: "top-center",
         autoClose: 2000,
@@ -53,7 +53,7 @@ const Login = () => {
           // navigate('/')
         })
         .catch(err=>{
-          console.log("ERROR",err.message)
+          // console.log("ERROR",err.message)
           toast.error(`Login failed: ${err.message}`, {
             position: "top-center",
             autoClose: 2000,

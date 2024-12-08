@@ -5,7 +5,7 @@ const CardDetails = () => {
     
     
     const items = useLoaderData();
-    console.log(items)
+    // console.log(items)
    const {name,email,itemName,quantity,category,photo,process,customization,price,rating,description } = items
    
     

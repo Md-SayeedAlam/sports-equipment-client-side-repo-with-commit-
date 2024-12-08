@@ -11,7 +11,7 @@ const AllEquipment = () => {
   const handleSort = () => {
     const sortedEquipment = [...equipment].sort((a, b) => 
       parseFloat(a.price) - parseFloat(b.price))
-    console.log(sortedEquipment)
+    // console.log(sortedEquipment)
     setEquipment(sortedEquipment);
   };
 

@@ -6,7 +6,7 @@ import { useLoaderData } from 'react-router-dom';
 const UpdatePage = () => {
     const { user } = useContext(AuthContext);
     const items = useLoaderData();
-    console.log(items)
+    // console.log(items)
     const {_id,name,email,itemName,quantity,category,photo,process,customization,price,rating,description } = items
 
 
@@ -29,7 +29,7 @@ const UpdatePage = () => {
 
 
     const newItem = {name,email,itemName,quantity,category,photo,process,customization,price,rating,description }
-    console.log(newItem)
+    // console.log(newItem)
 
     fetch(`https://sports-equipments-server-omega.vercel.app/equipments/${_id}`,{
         method:'PUT',
@@ -40,7 +40,7 @@ const UpdatePage = () => {
     })
     .then(res=>res.json())
     .then(data=>{
-        console.log(data)
+        // console.log(data)
         if(data.modifiedCount ){
             Swal.fire({
                 title:'SUCCESS',

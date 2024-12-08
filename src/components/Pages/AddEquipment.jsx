@@ -23,7 +23,7 @@ const AddEquipment = () => {
 
 
     const newItem = {name,email,itemName,quantity,category,photo,process,customization,price,rating,description }
-    console.log(newItem)
+    // console.log(newItem)
 
     fetch('https://sports-equipments-server-omega.vercel.app/equipments',{
         method:'POST',
@@ -34,7 +34,7 @@ const AddEquipment = () => {
     })
     .then(res=>res.json())
     .then(data=>{
-        console.log(data)
+        // console.log(data)
         if(data.insertedId){
             Swal.fire({
                 title:'SUCCESS',

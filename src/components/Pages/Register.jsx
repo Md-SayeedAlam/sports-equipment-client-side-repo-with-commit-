@@ -22,7 +22,7 @@ const Register = () => {
         const email = e.target.email.value;
         const photo = e.target.photo.value;
         const password = e.target.password.value;
-        console.log(name, photo, email, password);
+        // console.log(name, photo, email, password);
     
         if (password.length < 6) {
           setError("Password must contain at least 6 characters");
@@ -63,7 +63,7 @@ const Register = () => {
           const user = result.user;
           setUser(user);
 
-          console.log(user);
+          // console.log(user);
 
           e.target.reset();
           toast("User Created Successfully.", {
@@ -77,7 +77,7 @@ const Register = () => {
           navigate('/')
         })
         .catch(error=>{
-          console.log('ERROR',error);
+          // console.log('ERROR',error);
           toast.error(`User Created Failed ${error.message}`, {
             position: "top-center",
             autoClose: 2000,
@@ -94,7 +94,7 @@ const Register = () => {
 
         signInWithGoogle()
         .then(result=>{
-          console.log(result.user);
+          // console.log(result.user);
           toast.success("login successful", {
             position: "top-center",
             autoClose: 2000,
@@ -103,7 +103,7 @@ const Register = () => {
           navigate("/");
         })
         .catch(error=>{
-          console.log('ERROR',error.message)
+          // console.log('ERROR',error.message)
           toast.error(`'Login Failed ${err.message}`, {
             position: "top-center",
             autoClose: 2000,
