@@ -24,7 +24,7 @@ const Home = () => {
       </Tooltip>
       <div className="bg-base-300">
         {/* Banner section */}
-        <div className="px-4 py-2 bg-gray-200 text-black text-center">
+        <div className="px-4 py-2 text-center">
           <Theme></Theme>
         </div>
 
