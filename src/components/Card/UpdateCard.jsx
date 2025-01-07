@@ -67,6 +67,13 @@ const UpdateCard = ({item,items,setItems}) => {
           </div>
         </div>
       </div>
+
+
+
+  
+
+
+
     );
 };
 

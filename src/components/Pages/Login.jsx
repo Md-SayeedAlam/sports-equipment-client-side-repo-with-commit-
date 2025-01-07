@@ -27,9 +27,9 @@ const Login = () => {
       setUser(user)
       toast.success('login successful' ,{position: "top-center",
         autoClose: 2000,})
-      // navigate('/')
+      navigate('/')
       
-      navigate(location?.state ? location.state  : "/");
+      // navigate(location?.state ? location.state  : "/");
     })
     .catch(err=>{
       // console.log("ERROR",err.message)

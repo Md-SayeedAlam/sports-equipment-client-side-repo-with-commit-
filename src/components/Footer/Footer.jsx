@@ -24,6 +24,10 @@ const Footer = () => {
         Email : Sports@gmail.com
         
         </p>
+      
+        <p>
+          Or Visit <Link className='text-blue-600' to='/contact'>Our Page</Link>
+        </p>
     <p className='font-semibold'>Copyright © {new Date().getFullYear()} - All right reserved</p>
   </aside>
   <nav>

@@ -21,6 +21,7 @@ import MyProfile from './components/Pages/MyProfile';
 import CardDetails from './components/CardDetails/CardDetails';
 
 import UpdatePage from './components/Pages/UpdatePage';
+import Contact from './components/Pages/Contact';
 
 const router = createBrowserRouter([
   {
@@ -66,8 +67,12 @@ const router = createBrowserRouter([
         element:<PrivateRoute><MyProfile></MyProfile></PrivateRoute>
       },
       {
+        path:'/contact',
+        element:<Contact></Contact>
+      },
+      {
         path:'/equipments/:id',
-        element:<PrivateRoute><CardDetails></CardDetails></PrivateRoute>,
+        element:<CardDetails></CardDetails>,
         loader:({params})=>fetch(`https://sports-equipments-server-omega.vercel.app/equipments/${params.id}`)
       },
       {

@@ -22,15 +22,15 @@ const Home = () => {
       <Tooltip anchorSelect=".my-anchor-element" place="top">
         Click It For Change Theme
       </Tooltip>
-      <div className="bg-base-300">
+      <div className="bg-base-300 px-5">
         {/* Banner section */}
-        <div className="px-4 py-2 text-center">
+        <div className="px-4  text-center">
           <Theme></Theme>
         </div>
 
-        <div className="carousel w-full  mt-10 mb-10">
+        <div className="carousel w-full  mt-10 mb-10 overflow-hidden ">
           <div id="slide1" className="carousel-item relative w-full">
-            <img src={sports1} className="w-full  h-[500px]" />
+            <img src={sports1} className="w-full  h-[200px]" />
             <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
               <a href="#slide4" className="btn btn-circle">
                 ❮
@@ -41,7 +41,7 @@ const Home = () => {
             </div>
           </div>
           <div id="slide2" className="carousel-item relative w-full">
-            <img src={sports2} className="w-full h-[500px]" />
+            <img src={sports2} className="w-full h-[200px]" />
             <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
               <a href="#slide1" className="btn btn-circle">
                 ❮
@@ -52,7 +52,7 @@ const Home = () => {
             </div>
           </div>
           <div id="slide3" className="carousel-item relative w-full">
-            <img src={sports3} className="w-full h-[500px]" />
+            <img src={sports3} className="w-full h-[200px]" />
             <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
               <a href="#slide2" className="btn btn-circle">
                 ❮
@@ -71,7 +71,7 @@ const Home = () => {
           </h2>
         </Fade>
         <Fade direction="left">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 border-gray-200 mt-10 mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 border-gray-200 mt-10 mb-10">
             {items.slice(0, 6).map((item) => (
               <Card key={item._id} item={item}></Card>
             ))}

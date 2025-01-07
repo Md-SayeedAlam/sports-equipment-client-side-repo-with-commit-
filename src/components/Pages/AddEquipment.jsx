@@ -179,7 +179,7 @@ const AddEquipment = () => {
                 type="text"
                 name="description"
                 id=""
-                placeholder="Details"
+                placeholder="Description"
                 className="input input-bordered w-full"
               />
             </label>

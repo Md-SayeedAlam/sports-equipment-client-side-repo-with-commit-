@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, Navigate, useLoaderData } from "react-router-dom";
+import Card from "../Card/Card";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const AllEquipment = () => {
   const data = useLoaderData();
+  const {user} = useContext(AuthContext)
 
   // console.log(data);
 
@@ -26,11 +29,12 @@ const AllEquipment = () => {
 <div className="flex flex-col gap-4 justify-center items-center mt-6 bg-base-200 p-3">
   <div>
     <button onClick={handleSort} className="btn btn-neutral ">
-      Sort By Price
+      Sort By Price(ASC)
     </button>
   </div>
  {/* added responsive classes in this table */}
-  <div className="w-full ">
+
+  {/* <div className="w-full ">
     <table className="table-auto w-full border border-gray-200">
       <thead>
         <tr className="">
@@ -92,7 +96,24 @@ const AllEquipment = () => {
         ))}
       </tbody>
     </table>
+  </div> */}
+
+
+ 
+
+
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+  {equipment.map((item, index) =><Card item={item} key={index}></Card>)}
   </div>
+
+
+
+
+
+
+
+
+
 </div>
 
 

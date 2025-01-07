@@ -25,8 +25,8 @@ const Navbar = () => {
 
 
     return (
-        <div className="navbar   bg-base-300 ">
-      <div className="navbar-start">
+        <div className="navbar bg-base-300 sticky top-0 z-50">
+      <div className="navbar-start px-0 lg:px-5">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
@@ -54,6 +54,7 @@ const Navbar = () => {
           <NavLink to="/addEquipment">Add Equipment</NavLink>
         <NavLink to={`/myEquipment/${user.email}`}>My Equipment</NavLink>
         <NavLink to="/myProfile">My Profile</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
          
         </ul> :
          <ul
@@ -62,9 +63,10 @@ const Navbar = () => {
        >
          <NavLink to="/">Home</NavLink>
          <NavLink to="/allEquipment">All Sports Equipment</NavLink>
-         <NavLink to="/addEquipment">Add Equipment</NavLink>
+         <NavLink to="/contact">Contact</NavLink>
+         {/* <NavLink to="/addEquipment">Add Equipment</NavLink>
        <NavLink to="/myEquipment">My Equipment</NavLink>
-       <NavLink to="/myProfile">My Profile</NavLink>
+       <NavLink to="/myProfile">My Profile</NavLink> */}
         
        </ul>
          }
@@ -82,6 +84,7 @@ const Navbar = () => {
         <NavLink to="/addEquipment">Add Equipment</NavLink>
         <NavLink to={`/myEquipment/${user.email}`}>My Equipment</NavLink>
         <NavLink to="/myProfile">My Profile</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
         
       </ul>
     </div>
@@ -90,10 +93,11 @@ const Navbar = () => {
     <ul className="menu menu-horizontal px-1 space-x-5">
       <NavLink to="/">Home</NavLink>
       <NavLink to="/allEquipment">All Sports Equipment</NavLink>
-      <NavLink to="/addEquipment">Add Equipment</NavLink>
+      <NavLink to="/contact">Contact</NavLink>
+      {/* <NavLink to="/addEquipment">Add Equipment</NavLink>
       <NavLink to="/myEquipment">My Equipment</NavLink>
       <NavLink to="/myProfile">My Profile</NavLink>
-      
+       */}
     </ul>
   </div>
      }
@@ -126,7 +130,7 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div className="">
+      <div className="px-5">
         <Link to=''>
         <button 
         onClick={handleSignOut} 
@@ -139,7 +143,7 @@ const Navbar = () => {
       :
 
        
-        <div className="navbar-end gap-2">
+        <div className="navbar-end gap-2 px-5">
         <Link to='/login'><button className="btn btn-neutral">Login</button></Link>
         <Link to='/register'><button className="btn btn-neutral">Register</button></Link>
       </div>
@@ -148,111 +152,6 @@ const Navbar = () => {
 
 
     </div>
-
-
-
-
-
-
-
-
-
-//   <div className="navbar bg-base-300 px-4">
-//   {/* Navbar Start */}
-//   <div className="navbar-start">
-//     {/* Dropdown for small screens */}
-//     <div className="dropdown">
-//       <label tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-//         <svg
-//           xmlns="http://www.w3.org/2000/svg"
-//           className="h-5 w-5"
-//           fill="none"
-//           viewBox="0 0 24 24"
-//           stroke="currentColor"
-//         >
-//           <path
-//             strokeLinecap="round"
-//             strokeLinejoin="round"
-//             strokeWidth="2"
-//             d="M4 6h16M4 12h8m-8 6h16"
-//           />
-//         </svg>
-//       </label>
-//       <ul
-//         tabIndex={0}
-//         className="menu menu-compact dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow space-y-3"
-//       >
-//         <NavLink to="/">Home</NavLink>
-//         <NavLink to="/allEquipment">All Sports Equipment</NavLink>
-//         <NavLink to="/addEquipment">Add Equipment</NavLink>
-//         {user && <NavLink to={`/myEquipment/${user.email}`}>My Equipment</NavLink>}
-//         <NavLink to="/myProfile">My Profile</NavLink>
-//       </ul>
-//     </div>
-//     {/* Logo and Brand Name */}
-//     <img className="lg:w-10 w-8 rounded-full mr-2" src={logo} alt="Logo" />
-//     <Link to="/" className="font-bold text-sm md:text-base lg:text-xl">
-//       Sports Equipment Store
-//     </Link>
-//   </div>
-
-//   {/* Navbar Center */}
-//   <div className={`navbar-center hidden lg:flex ${user ? "lg:mr-52" : ""}`}>
-//     <ul className="menu menu-horizontal px-1 space-x-5">
-//       <NavLink to="/">Home</NavLink>
-//       <NavLink to="/allEquipment">All Sports Equipment</NavLink>
-//       <NavLink to="/addEquipment">Add Equipment</NavLink>
-//       {user ? (
-//         <NavLink to={`/myEquipment/${user.email}`}>My Equipment</NavLink>
-//       ) : (
-//         <NavLink to="/myEquipment">My Equipment</NavLink>
-//       )}
-//       <NavLink to="/myProfile">My Profile</NavLink>
-//     </ul>
-//   </div>
-
-//   {/* Navbar End */}
-//   <div className="navbar-end flex items-center gap-2">
-//     {user ? (
-//       <>
-//         {/* Profile Picture Dropdown */}
-//         <div className="relative group">
-//           <div
-//             tabIndex={0}
-//             role="button"
-//             className="btn btn-ghost btn-circle avatar"
-//           >
-//             <div className="w-10 rounded-full">
-//               <img alt="Profile" src={user.photoURL} />
-//             </div>
-//           </div>
-//           <ul className="absolute right-0 top-12 invisible group-hover:visible bg-base-100 rounded-box z-10 w-36 p-2 shadow">
-//             <li>
-//               <a>{user.displayName}</a>
-//             </li>
-//           </ul>
-//         </div>
-//         {/* Logout Button */}
-//         <button
-//           onClick={handleSignOut}
-//           className="btn btn-neutral"
-//         >
-//           Logout
-//         </button>
-//       </>
-//     ) : (
-//       <>
-//         <Link to="/login">
-//           <button className="btn btn-neutral">Login</button>
-//         </Link>
-//         <Link to="/register">
-//           <button className="btn btn-neutral">Register</button>
-//         </Link>
-//       </>
-//     )}
-//   </div>
-// </div>
-
 
 
 
