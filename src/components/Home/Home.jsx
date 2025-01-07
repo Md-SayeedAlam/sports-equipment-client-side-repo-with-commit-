@@ -30,7 +30,7 @@ const Home = () => {
 
         <div className="carousel w-full  mt-10 mb-10 overflow-hidden ">
           <div id="slide1" className="carousel-item relative w-full">
-            <img src={sports1} className="w-full  h-[200px]" />
+            <img src={sports1} className="w-full  h-[300px]" />
             <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
               <a href="#slide4" className="btn btn-circle">
                 ❮
@@ -41,7 +41,7 @@ const Home = () => {
             </div>
           </div>
           <div id="slide2" className="carousel-item relative w-full">
-            <img src={sports2} className="w-full h-[200px]" />
+            <img src={sports2} className="w-full h-[300px]" />
             <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
               <a href="#slide1" className="btn btn-circle">
                 ❮
@@ -52,7 +52,7 @@ const Home = () => {
             </div>
           </div>
           <div id="slide3" className="carousel-item relative w-full">
-            <img src={sports3} className="w-full h-[200px]" />
+            <img src={sports3} className="w-full h-[300px]" />
             <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
               <a href="#slide2" className="btn btn-circle">
                 ❮
