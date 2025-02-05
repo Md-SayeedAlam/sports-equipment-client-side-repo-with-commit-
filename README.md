@@ -40,7 +40,6 @@
 | **State Management** | React Query                               |                         
 | **Routing**          | React Router DOM                          |
 | **Backend**          | Firebase (Authentication)                 |
-| **Payments**         | Stripe                                    |
 | **Notifications**    | React Hot Toast, SweetAlert2              |
 | **Search & Sort**    | Match Sorter, Sort-By                     |
 | **Deployment**       | *(Firebase, Netlify, etc.)*               |  
